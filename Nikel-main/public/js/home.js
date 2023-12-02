@@ -30,7 +30,7 @@ document.getElementById("transaction-form").addEventListener("submit", function(
     if (type === "2" && calculateBalanceAfterTransaction(data, newTransaction) < 0) {
         if (!confirm("Atenção: A adição desta despesa deixará seu saldo negativo. Deseja continuar?")) {
             alert("Operação cancelada. Seu saldo permanece inalterado.");
-            return; // Se o usuário pressionar 'Cancelar', aborta o processo
+            return; 
         }
     }
 
@@ -48,8 +48,8 @@ document.getElementById("transaction-form").addEventListener("submit", function(
 });
 
 function calculateBalanceAfterTransaction(data, transaction) {
-    const transactions = data.transactions.slice(); // Clonar o array de transações
-    transactions.unshift(transaction); // Adicionar a nova transação ao início
+    const transactions = data.transactions.slice(); // 
+    transactions.unshift(transaction); 
 
     let total = 0;
 
